@@ -13,7 +13,7 @@ const Banner = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h1 className="shadow py-auto ">Italian, Mexican, Indian and many more variety of dishes are taught</h1>
+            <h1 className="shadow">Italian, Mexican, Indian and many more variety of dishes are taught</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -24,7 +24,7 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h1 className="shadow py-auto ">Ensuring fun and equality cooking class for all ages</h1>
+            <h1 className="shadow">Ensuring fun and equality cooking class for all ages</h1>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -35,7 +35,7 @@ const Banner = () => {
           />
 
           <Carousel.Caption>
-            <h1 className="shadow py-auto ">Become a master of Dessert with proper guidance</h1>
+            <h1 className="shadow">Become a master of Dessert with proper guidance</h1>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
