@@ -1,11 +1,16 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Service.css'
 
 
 const Review = (props) => {
     const {picture, name, description, price} = props.review;
+    const navigate = useNavigate();
+
+    const navigateToCheckout = id =>{
+        navigate(`/checkout/${id}`);
+    }
     return (
         <Col>
             <Card className='h-100 mx-auto'>
@@ -17,9 +22,10 @@ const Review = (props) => {
                             <p className='fs-2 fw-bold'>Master Course</p>
                             <p className='text-secondary'>{description}</p>
                             <p className='fs-3 fw-bold'>Price: {price}</p>
-                            <Link to="/checkout">
+                            {/* <Link to="/checkout">
                                 <button className='btn btn-outline-danger'>Enroll</button>
-                            </Link>
+                            </Link> */}
+                            <button onClick={() => navigateToCheckout(name)} className='btn btn-outline-danger'>Enroll</button>
                         </div>
                     </div>
                 </Card.Body>

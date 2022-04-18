@@ -10,7 +10,7 @@ const Footer = () => {
     const year = today.getFullYear();
     return (
         <footer className='text-center mt-auto bg-black text-white fst-italic d-lg-flex justify-content-between'>
-            <h3 className='p-3'>copyright &copy; {year} by Chef's Academy</h3>
+            <h3 className='p-3'>Copyright &copy; {year} by Chef's Academy</h3>
             <div className='fs-2 text-white d-inline-flex'>
                 <div className='p-3'>
                     <a href="https://www.facebook.com/groups/288111895977592" target="_blank" rel="noopener noreferrer">
