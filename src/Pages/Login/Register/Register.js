@@ -1,22 +1,28 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css';
 import auth from '../../../firebase.init';
 import { Button, Form } from 'react-bootstrap';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Shared/Loading/Loading';
 
 const Register = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const [agree, setAgree] = useState(false);
 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
     const navigate = useNavigate();
+
+    if(loading){
+        return <Loading></Loading>
+    }
 
     if(user){
         navigate('/home');
@@ -41,9 +47,17 @@ const Register = () => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
             </Form.Group>
-            <Button variant="outline-light" type="submit">
+            {/* <Button variant="outline-light" type="submit">
                 Submit
-            </Button>
+            </Button> */}
+            <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+            <Form.Label className={`ps-2 ${agree ? '' : 'text-white'}`} htmlFor="terms">Accept Genius Car Terms and Conditions</Form.Label>
+            <br />
+            <input
+                disabled={!agree}
+                className='btn btn-outline-light mt-2'
+                type="submit"
+                value="Register" />
         </Form>
         <p className='fs-4 fw-bold my-3'>Already have an account? <Link to="/login" className='text-white pe-auto text-decoration-none'>Please Login</Link> </p>
         <SocialLogin></SocialLogin>

@@ -1,8 +1,10 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendEmailVerification, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css'
 
@@ -13,6 +15,7 @@ const Login = () => {
     const location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -20,6 +23,17 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
+
+    if (error) {
+        errorElement = <p className='text-white'>Error: {error?.message}</p>
+    }
 
     if (user) {
         navigate(from, { replace: true });
@@ -31,6 +45,17 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         signInWithEmailAndPassword(email, password);
+    }
+
+    const resetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('please enter your email address');
+        }
     }
     
     return (
@@ -45,11 +70,16 @@ const Login = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button variant="outline-light" type="submit">
-                    Submit
+                    Login
                 </Button>
             </Form>
+            {errorElement}
             <p className='fs-4 fw-bold my-3'>New to my website? <Link to="/register" className='text-white pe-auto text-decoration-none'>Please Register</Link> </p>
+
+            <p className='fs-4 fw-bold my-3'>Forget Password? <button className='btn btn-link text-white fs-4 fw-bold pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+
             <SocialLogin></SocialLogin>
+            <ToastContainer />
         </div>
     );
 };
