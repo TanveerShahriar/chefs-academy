@@ -1,29 +1,29 @@
 [
     {
         "id": "624ac68f084ef0063dc65f34",
-        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-1.jpg",
-        "name": "Mexican Cuisine Master Course",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/a10images/mexican.jpg",
+        "name": "Mexican Cuisine",
         "description": "Mexican cuisine is one of the healthiest and most flavorful ways to cook. With a fun and informative step-by-step approach, this wonderful course will teach you how to cook delicious Mexican meals.",
         "price": "$110"
     },
     {
         "id": "624ac68f7125ac1e8a9e2e7f",
-        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-2.jpeg",
-        "name": "Indian Cuisine Master Course",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/a10images/indian.jpg",
+        "name": "Indian Cuisine",
         "description": "Are you ready to learn some Indian cuisine? It is common that not everyone is born with a knack to cook Indian food. That's why this dedicated course offers online videos, mobile apps and e-books, in addition to professional lessons all aimed at introducing you to the art of cooking Indian food.",
         "price": "$130"
     },
     {
         "id": "624ac68f2c2ef9d53c1c2948",
-        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-3.jpg",
-        "name": "Italian Cuisine Master Course",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/a10images/italian.jpg",
+        "name": "Italian Cuisine",
         "description": "With flavors borrowed from different regions, Italian dishes are often very versatile and can be served as an appetizer, side dish, main course or even dessert. From Gnocchi Soups to Patate al forno and Baked Pasta, learn the true taste of Italian cuisine from this course.",
         "price": "$80"
     },
     {
         "id": "624ac68f39a3811cee0b8287",
-        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-4.jpg",
-        "name": "Art of Dessert Master Course",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/a10images/dessert.jpg",
+        "name": "Art of Dessert",
         "description": "Learn all of the tips, tricks, and best practices to make classic and contemporary desserts in this online course. From cakes and tarts, to puddings, parfaits and gelato there is nothing that this course can't handle. You will learn the fundamental techniques for all of your dessert needs from making puff pastry to piping swirls out of meringue. Become a bonafide pastry chef .",
         "price": "$100"
     }
