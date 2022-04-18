@@ -9,7 +9,7 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <footer className='text-center mt-auto p-3 bg-black text-white fst-italic d-flex justify-content-around'>
+        <footer className='text-center mt-auto bg-black text-white fst-italic d-flex justify-content-between'>
             <h3 className='p-3'>copyright &copy; {year} by Chef's Academy</h3>
             <div className='fs-2 text-white d-inline-flex'>
                 <div className='p-3'>
