@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css';
 import auth from '../../../firebase.init';
 import { Button, Form } from 'react-bootstrap';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
     const emailRef = useRef('');
@@ -30,17 +31,6 @@ const Register = () => {
     }
 
     return (
-        // <div className='register-form'>
-        //     <h2 style={{textAlign: 'center'}}>Please Register</h2>
-        //     <form onSubmit={handleRegister}>
-                
-        //         <input type="email" name="email" id="" placeholder='Email Address' required/>
-                
-        //         <input type="password" name="password" id="" placeholder='Password' required/>
-        //         <input type="submit" value="Register" />
-        //     </form>
-        //     <p>Already have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
-        // </div>
         <div className='container w-50 mx-auto my-5 rounded login-form'>
         <h2 className='text-white text-center mt-2'>Please Register</h2>
         <Form onSubmit={handleRegister}>
@@ -56,6 +46,7 @@ const Register = () => {
             </Button>
         </Form>
         <p className='fs-4 fw-bold my-3'>Already have an account? <Link to="/login" className='text-white pe-auto text-decoration-none'>Please Login</Link> </p>
+        <SocialLogin></SocialLogin>
     </div>
     );
 };
