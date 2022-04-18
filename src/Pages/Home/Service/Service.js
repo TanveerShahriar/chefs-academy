@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css'
 
 
@@ -16,7 +17,9 @@ const Review = (props) => {
                             <p className='fs-2 fw-bold'>Master Course</p>
                             <p className='text-secondary'>{description}</p>
                             <p className='fs-3 fw-bold'>Price: {price}</p>
-                            <button className='btn btn-outline-danger'>Enroll</button>
+                            <Link to="/checkout">
+                                <button className='btn btn-outline-danger'>Enroll</button>
+                            </Link>
                         </div>
                     </div>
                 </Card.Body>

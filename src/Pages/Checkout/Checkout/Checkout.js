@@ -4,7 +4,7 @@ import './Checkout.css'
 const Checkout = () => {
     return (
         <div>
-            This is Checkout
+            Thank you for booking
         </div>
     );
 };
