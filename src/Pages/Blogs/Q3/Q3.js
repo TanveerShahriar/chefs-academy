@@ -3,7 +3,7 @@ import "./Q3.css";
 
 const Q3 = () => {
   return (
-    <div className="ans p-3 mt-5 m-lg-5 rounded text-white">
+    <div className="ans p-3 mt-5 mb-3 m-lg-5 rounded text-white">
       <h3>
         What other services does firebase provide other than authentication
       </h3>

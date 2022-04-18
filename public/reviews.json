@@ -1,0 +1,20 @@
+[
+    {
+        "id": "624ac68f084ef0063dc65f34",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-1.jpg",
+        "name": "Rivera Benson",
+        "description": "I am greatful that I took this cooking course. The instructor was very patient. He allowed me to ask questions whenever I had a doubt about the instructions. When necessary, he gave examples using modern day utensils. I learned lots of information about food preparation, food safety and tools used in the kitchen. This is a very high quality program."
+    },
+    {
+        "id": "624ac68f7125ac1e8a9e2e7f",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-4.jpg",
+        "name": "Jennifer Brock",
+        "description": "I am delighted to write a review for this cooking course which I took. The course was presented in a professional, easy-to-follow format with clear and detailed explanations of many recipes. I also found the information about different cooking techniques to be helpful as well."
+    },
+    {
+        "id": "624ac68f2c2ef9d53c1c2948",
+        "picture": "https://raw.githubusercontent.com/TanveerShahriar/images/main/image-5.jpeg",
+        "name": "Roseann Miles",
+        "description": "I would like to thank you for this course and the time you spent covering each topic in depth. You covered a lot of ground from simple sorting to advanced counting functions. I now have the tools and confidence to tackle more advanced Chef problems, thanks to your teaching style."
+    }
+]
